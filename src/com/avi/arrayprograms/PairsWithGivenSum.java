@@ -29,7 +29,7 @@ public class PairsWithGivenSum {
         PairsWithGivenSum ps=new PairsWithGivenSum();
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         int[] arr={1,4,5,3,2,6,7};
-        int sum=4;
+        int sum=8;
         ps.findPairWithGivenSum(arr,sum);
     }
 }
