@@ -2,7 +2,6 @@
 @FunctionalInterface
 public interface FunctionalInterfaceExample {
 
-
     void singleAbstractMethod();  //only 1 abstract method but any number of default and static method
 
 

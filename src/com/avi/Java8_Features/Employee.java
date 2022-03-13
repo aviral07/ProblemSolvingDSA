@@ -34,7 +34,6 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(id, name);
     }   */
-
     public boolean equals(Object o){
 
         if( o == null  || getClass() != o.getClass()) {  // object of same class

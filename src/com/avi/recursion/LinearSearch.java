@@ -3,7 +3,6 @@ import java.util.List;
 
 public class LinearSearch {
 
-
     public static void main(String[] args) {
 
         int[]  arr={ 2,2,77,34,45};

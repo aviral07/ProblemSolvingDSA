@@ -1,7 +1,6 @@
 public class Reverse {
 
     public static void main(String[] args) {
-
        // reverse1(1234);
 
         System.out.println(reverse2(1234));
