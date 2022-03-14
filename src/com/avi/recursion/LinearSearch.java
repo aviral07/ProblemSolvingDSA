@@ -12,7 +12,9 @@ public class LinearSearch {
         //int resultI=findIndex(arr,2,0);
         //int resultL=findIndexLast(arr,2,arr.length-1);
 
-findAllIndex(arr,2,0);
+//findAllIndex(arr,2,0);
+
+ArrayList<Integer> al= findAllIndex(arr,2,0,new ArrayList<>());
         System.out.println(al);
 
     }
@@ -46,5 +48,16 @@ findAllIndex(arr,2,0);
             al.add(index);
         }
         findAllIndex(arr,target,index+1);
+    }
+
+    //return arraylist
+    static ArrayList<Integer> findAllIndex(int[] arr,int target,int index, ArrayList<Integer> list){
+         if(index == arr.length){
+             return list;
+         }
+         if(arr[index] == target){
+             list.add(index);
+         }
+        return  findAllIndex(arr,target,index +1,list);
     }
 }
