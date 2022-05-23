@@ -76,6 +76,21 @@ public class Employee {
         this.yearOfJoining = yearOfJoining;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", department='" + department + '\'' +
+                ", yearOfJoining=" + yearOfJoining +
+                ", salary=" + salary +
+                ", designation='" + designation + '\'' +
+                ", loc='" + loc + '\'' +
+                '}';
+    }
+
     public double getSalary() {
         return salary;
     }
