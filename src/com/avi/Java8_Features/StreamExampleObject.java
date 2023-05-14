@@ -31,6 +31,17 @@ public class StreamExampleObject {
         //Q4Fetch names of all the departments
         empList.stream().map(e->e.getDepartment()).distinct().forEach(System.out::println);
 
+        //Q5Find Third highest salary of employee
+        Optional<Double> salary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).skip(2).findFirst();
+
+        //Q6 Find Highest paid employee
+        Optional<Double> Highestpaidsalary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).skip(2).findFirst();
+
+
+
+
+
+
        // List<Employee> tempList= empList.stream().filter(e -> "Pune".equalsIgnoreCase(e.getLoc())).collect(Collectors.toList());
        // Stream<Employee> tempList= empList.stream().filter(e -> "Pune".equalsIgnoreCase(e.getLoc())).sorted();
        // tempList.stream().forEach(e -> System.out.println(e.getName()));
@@ -55,7 +66,7 @@ public class StreamExampleObject {
 
         Employee highestPaidEmployee = highestPaidEmployeeWrapper.get();
       //  System.out.println("Details Of Highest Paid Employee : "+highestPaidEmployee);
-     Optional<Double> salary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).skip(2).findFirst();
+    // Optional<Double> salary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).skip(2).findFirst();
       // List<String> names = (List<String>) empList.stream().collect(Collectors.toList(Comparator.comparing(Employee::getName)));
 
 

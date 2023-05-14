@@ -3,7 +3,7 @@ package com.avi.arrayprograms;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-
+//Complexity O(nlogn)
 public class PairsWithGivenSum {
     public void findPairWithGivenSum(int[] arr,int sum){
         int low=0;
@@ -24,6 +24,16 @@ public class PairsWithGivenSum {
             }
         }
     }
+
+///Better SOlution
+    public void findPairWithGivenSumHashmap(int[] arr,int sum){
+
+    }
+
+
+
+
+
 
     public static void main(String[] args) {
         PairsWithGivenSum ps=new PairsWithGivenSum();
