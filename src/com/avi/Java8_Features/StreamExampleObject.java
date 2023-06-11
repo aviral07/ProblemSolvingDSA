@@ -22,7 +22,7 @@ public class StreamExampleObject {
         List<Employee> empgreater25desprofessional=empList.stream().filter(e ->(e.getAge()>25 && "Professional".equalsIgnoreCase(e.getDesignation()))).collect(Collectors.toList());
 
         //Q2Fetch the employees names whose location is pune
-         empList.stream().filter(e ->e.getLoc().equalsIgnoreCase("Pune")).map(Employee::getName).forEach(System.out::println);
+         //empList.stream().filter(e ->e.getLoc().equalsIgnoreCase("Pune")).map(Employee::getName).forEach(System.out::println);
 
         //Q3Fetch the unique employees names in the emp list
          Set<String> uniquenames=new HashSet<>();
@@ -36,6 +36,27 @@ public class StreamExampleObject {
 
         //Q6 Find Highest paid employee
         Optional<Double> Highestpaidsalary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).skip(2).findFirst();
+
+
+        //Q7 Find String in this array of strings which starts with Ba(Asked in barclays Interview)
+
+        //System.out.println(noOfMaleAndFemaleEmployees);
+        List<String> listOfStringBag = Arrays.asList("Bags", "Ba", "Banner", "Baggage");
+
+        List<String> listOfStringStartsWithBa = listOfStringBag.stream() .filter(s ->s.startsWith("Bag")) .collect(Collectors.toList());
+        // System.out.println("list of String starts with  Ba: " + listOfStringStartsWithBa);
+
+        //Q8 Remove duplicate character from a string(
+
+        String orignalString = "aviralrrraa";
+
+        String output = Arrays.asList(orignalString.split(""))
+                .stream()
+                .distinct()
+                .collect(Collectors.joining());
+
+        System.out.println("Original String : " + orignalString);
+        System.out.println("After removing the duplicates : " + output);
 
 
 
@@ -71,11 +92,7 @@ public class StreamExampleObject {
 
 
 
-        //System.out.println(noOfMaleAndFemaleEmployees);
-        List<String> listOfStringBag = Arrays.asList("Bags", "Ba", "Banner", "Baggage");
 
-        List<String> listOfStringStartsWithBa = listOfStringBag.stream() .filter(s ->s.startsWith("Bag")) .collect(Collectors.toList());
-       // System.out.println("list of String starts with  Ba: " + listOfStringStartsWithBa);
 
 
     }
