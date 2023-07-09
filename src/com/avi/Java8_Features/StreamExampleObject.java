@@ -33,7 +33,7 @@ public class StreamExampleObject {
         empList.stream().map(e->e.getDepartment()).distinct().forEach(System.out::println);
 
         //Q5Find Third highest salary of employee
-        Optional<Double> salary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).skip(2).findFirst();
+       // Optional<Double> salary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).skip(2).findFirst();
 
         //Q6 Find Highest paid employee
         Optional<Double> Highestpaidsalary=empList.stream().map(e->e.getSalary()).sorted(Comparator.reverseOrder()).findFirst();
@@ -43,7 +43,7 @@ public class StreamExampleObject {
                 .sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).skip(2).findFirst();
         System.out.println(emp.get().getName());
 
-        //Q8Find String in this array of strings which starts with Ba(Asked in barclays Interview)
+        //Q8Find String in this array of strings which starts with Ba(Asked in barclays Interview)      
 
         //System.out.println(noOfMaleAndFemaleEmployees);
         List<String> listOfStringBag = Arrays.asList("Bags", "Ba", "Banner", "Baggage");
@@ -76,6 +76,18 @@ public class StreamExampleObject {
         Map<Integer, Employee> map2 = empList.stream()
                 .collect
                         (Collectors.toMap(Employee::getId, Function.identity()));
+
+
+
+       /* Map<String, Employee> topEmployees = empList.stream()
+                        .collect(Collectors.groupingBy(
+                                Employee:getDepartment,Collectors.collectingAndThen(Comparator.comparingDouble(e->e.getSalary())));*/
+
+
+
+
+
+
 
        // List<Employee> tempList= empList.stream().filter(e -> "Pune".equalsIgnoreCase(e.getLoc())).collect(Collectors.toList());
        // Stream<Employee> tempList= empList.stream().filter(e -> "Pune".equalsIgnoreCase(e.getLoc())).sorted();
