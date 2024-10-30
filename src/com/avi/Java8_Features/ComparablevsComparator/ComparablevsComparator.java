@@ -13,7 +13,7 @@ public class ComparablevsComparator {
         studentList.add(new Student(3,"Andfdsuvi",39));
         Collections.sort(studentList);
       //  System.out.println(studentList);
-        Collections.sort(studentList,Student.nameComparator);
+        Collections.sort(studentList,new StudentAgeComparator());
         //System.out.println(studentList);
         //When you print an object, by default the Java compiler invokes the toString() method on the object. So by overriding the toString() method, we can provide meaningful output.
         Collections.sort(studentList,new StudentAgeComparator());

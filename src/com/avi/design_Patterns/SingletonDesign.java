@@ -16,5 +16,5 @@ private static SingletonDesign singletonInstanxe=new SingletonDesign();  //only 
 
 
     //three steps
-
+      
 }

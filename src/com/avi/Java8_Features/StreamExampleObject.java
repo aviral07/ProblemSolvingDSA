@@ -118,7 +118,11 @@ public class StreamExampleObject {
 
 
 
+   String s="Our grandfather ensured ";
 
+   List<String> stringList= List.of(s.split(" "));
+       Map<String,Long> frequencyMapofWords=stringList.stream().distinct().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        System.out.println(frequencyMapofWords);
 
 
     }
